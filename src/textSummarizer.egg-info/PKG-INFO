@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: textSummarizer
+Version: 0.0.0
+Summary: A small python package for NLP app
+Home-page: https://github.com/bhiki_pallai/NLP_projetcs
+Author: bhiki_pallai
+Author-email: vicky.pallai900@gmail.com
+Project-URL: Bug Tracker, https://github.com/bhiki_pallai/NLP_projetcs/issues
+
+# NLP_projetcs
+
+1. create env
+conda create -n nlp python=3.12 -y
+conda activate nlp
+
+2. create a temp.py for project structure
