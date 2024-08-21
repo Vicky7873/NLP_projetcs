@@ -108,3 +108,73 @@ x======x]
 [2024-08-21 09:05:33,900: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
 
 x======x]
+[2024-08-21 09:21:50,472: INFO: config: PyTorch version 2.4.0 available.]
+[2024-08-21 09:23:41,885: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:23:41,891: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:23:41,892: INFO: common: created directory at: artifacts]
+[2024-08-21 09:23:54,722: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:23:54,724: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:23:54,725: INFO: common: created directory at: artifacts]
+[2024-08-21 09:23:54,726: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-21 09:28:13,378: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-21 09:28:13,379: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:28:13,379: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:28:13,379: INFO: common: created directory at: artifacts]
+[2024-08-21 09:28:13,379: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-21 09:28:13,379: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-08-21 09:28:13,470: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x======x]
+[2024-08-21 09:28:13,470: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-08-21 09:28:13,470: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:28:13,471: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:28:13,471: INFO: common: created directory at: artifacts]
+[2024-08-21 09:28:13,471: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-21 09:28:13,471: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-08-21 09:28:13,543: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x======x]
+[2024-08-21 09:28:13,543: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-08-21 09:28:13,544: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:28:13,544: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:28:13,544: INFO: common: created directory at: artifacts]
+[2024-08-21 09:28:13,545: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-21 09:28:13,545: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-08-21 09:28:13,616: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x======x]
+[2024-08-21 09:28:55,950: INFO: config: PyTorch version 2.4.0 available.]
+[2024-08-21 09:28:56,074: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:28:56,075: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:28:56,075: INFO: common: created directory at: artifacts]
+[2024-08-21 09:28:56,075: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-21 09:31:10,418: INFO: config: PyTorch version 2.4.0 available.]
+[2024-08-21 09:31:10,537: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-21 09:31:10,538: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:31:10,538: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:31:10,538: INFO: common: created directory at: artifacts]
+[2024-08-21 09:31:10,538: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-21 09:31:10,538: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-08-21 09:31:10,624: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x======x]
+[2024-08-21 09:31:10,624: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-08-21 09:31:10,625: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:31:10,626: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:31:10,626: INFO: common: created directory at: artifacts]
+[2024-08-21 09:31:10,626: INFO: common: created directory at: artifacts/data_validation]
+[2024-08-21 09:31:10,626: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x======x]
+[2024-08-21 09:31:10,626: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-08-21 09:31:10,627: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:31:10,627: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:31:10,627: INFO: common: created directory at: artifacts]
+[2024-08-21 09:31:10,628: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-21 09:31:11,729: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 09:31:11,730: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 09:31:11,730: INFO: common: created directory at: artifacts]
+[2024-08-21 09:31:11,730: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-21 09:31:13,302: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x======x]
