@@ -33,4 +33,8 @@ this .py file will zip unzip the data and store the data into the respective fol
 6. update the pipeline
 
 7. update the main.py
+to run the pipe line we need write the pieace of code
 8. update the app.py
+
+# why we need data validation?
+A> bcoz some how if we got the in correct data/ wrongly formated data our model will through an error, so to avoid these things we should perform data validation
