@@ -178,3 +178,33 @@ x======x]
 [2024-08-21 09:31:13,302: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
 
 x======x]
+[2024-08-21 21:33:06,821: INFO: config: PyTorch version 2.4.0 available.]
+[2024-08-21 21:33:06,960: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-21 21:33:06,961: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 21:33:06,961: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 21:33:06,961: INFO: common: created directory at: artifacts]
+[2024-08-21 21:33:06,961: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-21 21:33:06,961: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-08-21 21:33:07,043: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x======x]
+[2024-08-21 21:33:07,043: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-08-21 21:33:07,044: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 21:33:07,045: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 21:33:07,045: INFO: common: created directory at: artifacts]
+[2024-08-21 21:33:07,045: INFO: common: created directory at: artifacts/data_validation]
+[2024-08-21 21:33:07,045: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x======x]
+[2024-08-21 21:33:07,045: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-08-21 21:33:07,046: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 21:33:07,046: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 21:33:07,046: INFO: common: created directory at: artifacts]
+[2024-08-21 21:33:07,046: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-21 21:33:08,184: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-21 21:33:08,185: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-21 21:33:08,185: INFO: common: created directory at: artifacts]
+[2024-08-21 21:33:08,185: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-21 21:33:09,240: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x======x]
