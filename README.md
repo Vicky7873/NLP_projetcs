@@ -97,3 +97,44 @@ AWS_REGION = us-east-1
 AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
 ECR_REPOSITORY_NAME = simple-app
+
+Project structure which follow the 
+
+
+                      +--------------------------+
+                      |  Pipeline                |
+                      |--------------------------|
+                      | + run_pipeline()         |
+                      +---------+----------------+
+                                |
+                                v
+                      +--------------------------+
+                      |  ConfigurationManager     |
+                      |--------------------------|
+                      | - config: dict            |
+                      | - params: dict            |
+                      |--------------------------|
+                      | + get_data_ingestion_config() -> DataIngestionConfig |
+                      +---------+----------------+
+                                |
+                                |
+                                v
+                      +--------------------------+
+                      |  DataIngestionConfig      |
+                      |--------------------------|
+                      | - root_dir: Path          |
+                      | - source_URL: str         |
+                      | - local_data_file: Path   |
+                      | - unzip_dir: Path         |
+                      +--------------------------+
+                                |
+                                |
+                                v
+                      +--------------------------+
+                      |  DataIngestion            |
+                      |--------------------------|
+                      | - config: DataIngestionConfig |
+                      |--------------------------|
+                      | + download_file()         |
+                      | + extract_zip_file()      |
+                      +--------------------------+
