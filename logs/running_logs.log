@@ -511,3 +511,234 @@ x======x]
 [2024-08-22 08:31:00,912: INFO: main: >>>>>> stage Model Training stage completed <<<<<<
 
 x======x]
+[2024-08-22 08:59:03,262: INFO: server: Started server process [32513]]
+[2024-08-22 08:59:03,262: INFO: on: Waiting for application startup.]
+[2024-08-22 08:59:03,262: INFO: on: Application startup complete.]
+[2024-08-22 08:59:03,263: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-08-22 08:59:08,682: WARNING: h11_impl: Invalid HTTP request received.]
+[2024-08-22 08:59:08,685: WARNING: h11_impl: Invalid HTTP request received.]
+[2024-08-22 08:59:59,654: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 08:59:59,655: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 08:59:59,655: INFO: common: created directory at: artifacts]
+[2024-08-22 08:59:59,668: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/app.py", line 41, in predict_route
+    raise e
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/app.py", line 38, in predict_route
+    text = obj.predict(text)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/src/textSummarizer/pipeline/prediction.py", line 9, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 916, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 2255, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for 'artifacts/model_trainer/pegasus-samsum-model'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'artifacts/model_trainer/pegasus-samsum-model' is the correct path to a directory containing all relevant files for a T5TokenizerFast tokenizer.
+[2024-08-22 09:00:25,382: INFO: config: PyTorch version 2.4.0 available.]
+[2024-08-22 09:00:25,912: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-22 09:00:25,913: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:00:25,914: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:00:25,914: INFO: common: created directory at: artifacts]
+[2024-08-22 09:00:25,914: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-22 09:00:25,914: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-08-22 09:00:25,993: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x======x]
+[2024-08-22 09:00:25,993: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-08-22 09:00:25,994: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:00:25,994: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:00:25,994: INFO: common: created directory at: artifacts]
+[2024-08-22 09:00:25,994: INFO: common: created directory at: artifacts/data_validation]
+[2024-08-22 09:00:25,995: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x======x]
+[2024-08-22 09:00:25,995: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-08-22 09:00:25,996: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:00:25,996: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:00:25,996: INFO: common: created directory at: artifacts]
+[2024-08-22 09:00:25,996: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-22 09:00:26,708: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:00:26,709: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:00:26,709: INFO: common: created directory at: artifacts]
+[2024-08-22 09:00:26,709: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-22 09:00:28,034: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x======x]
+[2024-08-22 09:00:28,034: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2024-08-22 09:00:28,035: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:00:28,036: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:00:28,036: INFO: common: created directory at: artifacts]
+[2024-08-22 09:00:28,036: INFO: common: created directory at: artifacts/model_trainer]
+[2024-08-22 09:00:28,037: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:00:28,037: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:00:28,037: INFO: common: created directory at: artifacts]
+[2024-08-22 09:00:28,037: INFO: common: created directory at: artifacts/model_trainer]
+[2024-08-22 09:02:13,491: INFO: main: >>>>>> stage Model Training stage completed <<<<<<
+
+x======x]
+[2024-08-22 09:02:38,393: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:02:38,394: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:02:38,395: INFO: common: created directory at: artifacts]
+[2024-08-22 09:02:38,399: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/app.py", line 41, in predict_route
+    raise e
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/app.py", line 38, in predict_route
+    text = obj.predict(text)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/src/textSummarizer/pipeline/prediction.py", line 9, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 916, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 2255, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for 'artifacts/model_trainer/pegasus-samsum-model'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'artifacts/model_trainer/pegasus-samsum-model' is the correct path to a directory containing all relevant files for a T5TokenizerFast tokenizer.
+[2024-08-22 09:02:44,047: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:02:44,049: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:02:44,049: INFO: common: created directory at: artifacts]
+[2024-08-22 09:02:44,051: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/app.py", line 41, in predict_route
+    raise e
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/app.py", line 38, in predict_route
+    text = obj.predict(text)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/bhikipallai/Desktop/Projects/NLP_projetcs/src/textSummarizer/pipeline/prediction.py", line 9, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 916, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Applications/anaconda3/envs/nlp/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 2255, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for 'artifacts/model_trainer/pegasus-samsum-model'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'artifacts/model_trainer/pegasus-samsum-model' is the correct path to a directory containing all relevant files for a T5TokenizerFast tokenizer.
+[2024-08-22 09:04:44,349: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:04:44,351: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:04:44,352: INFO: common: created directory at: artifacts]
+[2024-08-22 09:05:17,220: INFO: server: Shutting down]
+[2024-08-22 09:05:17,322: INFO: on: Waiting for application shutdown.]
+[2024-08-22 09:05:17,323: INFO: on: Application shutdown complete.]
+[2024-08-22 09:05:17,323: INFO: server: Finished server process [32513]]
+[2024-08-22 09:05:28,753: INFO: server: Started server process [32775]]
+[2024-08-22 09:05:28,753: INFO: on: Waiting for application startup.]
+[2024-08-22 09:05:28,753: INFO: on: Application startup complete.]
+[2024-08-22 09:05:28,753: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-08-22 09:05:59,258: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-08-22 09:05:59,261: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-22 09:05:59,261: INFO: common: created directory at: artifacts]
+[2024-08-22 09:06:10,887: INFO: server: Shutting down]
+[2024-08-22 09:06:10,989: INFO: on: Waiting for application shutdown.]
+[2024-08-22 09:06:10,989: INFO: on: Application shutdown complete.]
+[2024-08-22 09:06:10,990: INFO: server: Finished server process [32775]]

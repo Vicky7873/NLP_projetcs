@@ -1,6 +1,6 @@
 from textSummarizer.constants import *
 from textSummarizer.utils.common import read_yaml_file, create_directories
-from textSummarizer.entity import (DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig)
+from textSummarizer.entity import (DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig)
 
 # this peace of code is for the configuration manager where we will read the config/params yaml and and return the data to the entity folder, this will used in pipeline 
 class ConfigurationManager:
@@ -73,3 +73,13 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+    def get_model_evaluation_config(self)->ModelEvaluationConfig:
+        config = self.config.model_evaluation
+
+        model_evaluation_config = ModelEvaluationConfig(
+            model_path = config.model_path,
+            tokenizer_path = config.tokenizer_path
+        )
+
+        return model_evaluation_config
